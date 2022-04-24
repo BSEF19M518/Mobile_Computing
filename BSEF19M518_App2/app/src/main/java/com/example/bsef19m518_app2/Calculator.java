@@ -10,20 +10,32 @@ public class Calculator {
     String exp;
     String exp2;
     Character opr;
+    boolean flag;
 
     public Calculator() {
         exp="";
         exp2="";
         opr='\0';
+        flag=true;
+    }
+
+    public String setExp(String exp) {
+
+        while(exp.length()>0 && exp.charAt(0)== '0')
+        {
+            exp=exp.substring(1,exp.length());
+        }
+        this.exp=exp;
+        return exp;
     }
 
     public void AppendNumber(String num)
     {
-        exp+=num;
+        setExp(exp+num);
     }
     public boolean isNotOperator(String str)
     {
-        String[] operators={"+","-","*","/","="};
+        String[] operators={"+","-","*","/","=","C"};
 
         for(String opr:operators)
         {
@@ -37,25 +49,35 @@ public class Calculator {
         String inp= String.valueOf(((Button)view).getText());
         if(isNotOperator(inp))
         {
+            if(!opr.equals('\0') && flag) {
+                setExp("");
+                flag=false;
+            }
             AppendNumber(inp);
+        }
+        else if(inp.equals("C"))
+        {
+            opr='\0';
+            exp2=exp="0";
         }
         else
         {
             if(inp.equals("="))
             {
+                flag=true;
                 switch (opr)
                 {
                     case '+':
-                          exp= String.valueOf(Integer.parseInt(exp)+Integer.parseInt(exp2));
+                          setExp(String.valueOf(Integer.parseInt(exp)+Integer.parseInt(exp2)));
                           break;
                     case '-':
-                        exp= String.valueOf(Integer.parseInt(exp)-Integer.parseInt(exp2));
+                        setExp(String.valueOf(Integer.parseInt(exp2)-Integer.parseInt(exp)));
                         break;
                     case '*':
-                        exp= String.valueOf(Integer.parseInt(exp)*Integer.parseInt(exp2));
+                        setExp(String.valueOf(Integer.parseInt(exp)*Integer.parseInt(exp2)));
                         break;
                     case '/':
-                        exp= String.valueOf(Integer.parseInt(exp2)/Integer.parseInt(exp));
+                        setExp(String.valueOf(Integer.parseInt(exp2)/Integer.parseInt(exp)));
                         break;
                     default:
                         break;
@@ -63,9 +85,10 @@ public class Calculator {
             }
             else
             {
+
                 opr=inp.charAt(0);
                 exp2=exp;
-                exp="";
+
             }
         }
 
