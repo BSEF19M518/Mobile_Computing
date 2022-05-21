@@ -11,20 +11,26 @@ import android.widget.LinearLayout;
 public class Lessons extends AppCompatActivity implements View.OnClickListener{
 
     LinearLayout fruit_linear_layout;
-    String[] fruit_names;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lessons);
 
-        fruit_names=new String[]{"apple","grapes","mango","pineapple","lychee","plum","pear","orange","peach","banana","cherry","avocado","kiwi","pomegranate","chikoo","strawberry","apricot","date","guava","fig","coconut","watermelon"};
+        Intent intent=getIntent();
+        String[] fruit_names=intent.getStringArrayExtra("fruit_names");
+
         fruit_linear_layout=findViewById(R.id.fruits_linear_layout);
+
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(400, LinearLayout.LayoutParams.WRAP_CONTENT);
+        params.setMargins(0,5,0,5);
         for(String fruit:fruit_names)
         {
             Button btn=new Button(this);
             btn.setText(fruit);
             btn.setOnClickListener(this);
+            btn.setLayoutParams(params);
             fruit_linear_layout.addView(btn); ;
         }
 

@@ -10,10 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LearningApp_Task">
         <activity
+            android:name=".Exam"
+            android:exported="true" />
+        <activity
             android:name=".FruitDetail"
             android:exported="true" />
         <activity
             android:name=".Lessons"
+            android:exported="true"></activity>
+        <activity
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,9 +27,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".MainActivity"
-            android:exported="true"></activity>
     </application>
 
 </manifest>

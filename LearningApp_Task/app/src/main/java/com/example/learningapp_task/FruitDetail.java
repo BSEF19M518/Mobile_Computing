@@ -4,12 +4,14 @@ import androidx.annotation.DrawableRes;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.Locale;
+import java.util.Random;
 
 public class FruitDetail extends AppCompatActivity {
 
@@ -28,12 +30,14 @@ public class FruitDetail extends AppCompatActivity {
         textView.setText(fruit_name.toUpperCase(Locale.ROOT));
         int counter=1;
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(600, LinearLayout.LayoutParams.WRAP_CONTENT);
-        params.setMargins(20,20,20,30);
+        params.setMargins(20,20,20,80);
+
         while(true) {
             try {
                 ImageView imageView = new ImageView(FruitDetail.this);
                 int drawableResourceId = this.getResources().getIdentifier(fruit_name + counter++, "drawable", this.getPackageName());
-                imageView.setImageDrawable(getResources().getDrawable(drawableResourceId));
+                Drawable res = getResources().getDrawable(drawableResourceId);
+                imageView.setImageDrawable(res);
                 imageView.setLayoutParams(params);
                 imageView.setAdjustViewBounds(true);
                 fruit_detail.addView(imageView);
