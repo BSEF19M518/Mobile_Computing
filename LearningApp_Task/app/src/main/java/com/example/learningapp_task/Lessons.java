@@ -31,7 +31,7 @@ public class Lessons extends AppCompatActivity implements View.OnClickListener{
             btn.setText(fruit);
             btn.setOnClickListener(this);
             btn.setLayoutParams(params);
-            fruit_linear_layout.addView(btn); ;
+            fruit_linear_layout.addView(btn);
         }
 
     }
