@@ -14,7 +14,9 @@
             android:exported="true" />
         <activity
             android:name=".ExamSetting"
-            android:exported="true" />
+            android:exported="true">
+
+        </activity>
         <activity
             android:name=".Exam"
             android:exported="true" />

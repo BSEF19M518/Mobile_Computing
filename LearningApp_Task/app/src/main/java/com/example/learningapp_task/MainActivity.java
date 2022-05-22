@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void examBtnClick(View v)
     {
-        Intent intent = new Intent(this,Exam.class);
+        Intent intent = new Intent(this,ExamSetting.class);
         intent.putExtra("fruit_names",fruit_names);
         startActivity(intent);
 

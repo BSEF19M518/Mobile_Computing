@@ -25,8 +25,8 @@ import java.util.Set;
 
 public class Exam extends AppCompatActivity {
 
-    static final int QUESTIONS_COUNT=10;
-    static final int OPTION_COUNT=5;
+    static int QUESTIONS_COUNT;
+    static  int OPTION_COUNT;
     LinearLayout exam_linear_layout;
     String[] fruit_names;
     ArrayList<String> answers;
@@ -40,6 +40,8 @@ public class Exam extends AppCompatActivity {
 
         Intent intent = getIntent();
         fruit_names=intent.getStringArrayExtra("fruit_names");
+        QUESTIONS_COUNT=intent.getIntExtra("no_of_questions",5);
+        OPTION_COUNT=intent.getIntExtra("no_of_options",4);
 
         exam_linear_layout=findViewById(R.id.exam_linear_layout);
 
