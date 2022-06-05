@@ -60,6 +60,24 @@ public class Exam2 extends AppCompatActivity {
         questions_list_view.setAdapter(adapter);
 
     }
+
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+        savedInstanceState.putStringArray("fruit_names", fruit_names);
+        savedInstanceState.putStringArrayList("answers", answers);
+        savedInstanceState.putSerializable("map",map);
+
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        fruit_names = savedInstanceState.getStringArray("fruit_names");
+        answers=savedInstanceState.getStringArrayList("answers");
+        map= (HashMap) savedInstanceState.getSerializable("map");
+    }
+
     public void submit_btn(View v)
     {
         int exam_status=checkExam();
@@ -83,22 +101,6 @@ public class Exam2 extends AppCompatActivity {
         boolean all_check=true;
         int correct=0;
         int index=0;
-
-//        for(int i=0;i<QUESTIONS_COUNT;i++)
-//        {
-//            View v= questions_list_view.getChildAt(i - questions_list_view.getFirstVisiblePosition());
-//            if(v==null)
-//                continue;;
-//            RadioGroup g= v.findViewById(R.id.options_radio_group);
-//            RadioButton btn= findViewById(g.getCheckedRadioButtonId());
-//            if(btn==null)
-//            {
-//                all_check=false;
-//                break;
-//            }
-//            if(btn.getText().toString().equals(answers.get(i)))
-//                correct++;
-//        }
 
 
         for(int i=0;i<QUESTIONS_COUNT;i++)

@@ -14,6 +14,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class QuizAdapter extends ArrayAdapter<MCQ> {
@@ -35,6 +36,7 @@ public class QuizAdapter extends ArrayAdapter<MCQ> {
         RadioButton option5 = convertView.findViewById(R.id.option5);
 
         imageView.setImageResource(mcq.getMCQImageID());
+
         option1.setText(mcq.getOption1());
         option2.setText(mcq.getOption2());
         option3.setText(mcq.getOption3());
@@ -45,6 +47,7 @@ public class QuizAdapter extends ArrayAdapter<MCQ> {
             @Override
             public void onClick(View view) {
                 Exam2.map.put(position,option1.getText());
+
             }
         });
 
@@ -58,18 +61,21 @@ public class QuizAdapter extends ArrayAdapter<MCQ> {
             @Override
             public void onClick(View view) {
                 Exam2.map.put(position,option3.getText());
+
             }
         });
         option4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Exam2.map.put(position,option4.getText());
+
             }
         });
         option5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Exam2.map.put(position,option5.getText());
+
             }
         });
 
