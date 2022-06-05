@@ -22,7 +22,7 @@ public class ExamSetting extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exam_setting);
-        dropdown1 = findViewById(R.id.spinner1);
+        dropdown1 = findViewById(R.id.spinner);
         dropdown2 = findViewById(R.id.spinner2);
 
         ArrayList<Integer> no_questions = new ArrayList<>();

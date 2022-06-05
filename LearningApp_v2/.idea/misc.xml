@@ -4,9 +4,13 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Waleed/AndroidStudioProjects/LearningApp_v2/app/src/main/res/drawable-v24/custom_button.xml" value="0.14635416666666667" />
-        <entry key="..\:/Users/Waleed/AndroidStudioProjects/LearningApp_v2/app/src/main/res/layout/activity_exam.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Waleed/AndroidStudioProjects/LearningApp_v2/app/src/main/res/layout/activity_exam.xml" value="0.1" />
+        <entry key="..\:/Users/Waleed/AndroidStudioProjects/LearningApp_v2/app/src/main/res/layout/activity_exam2.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Waleed/AndroidStudioProjects/LearningApp_v2/app/src/main/res/layout/activity_exam_setting.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Waleed/AndroidStudioProjects/LearningApp_v2/app/src/main/res/layout/activity_exam_setting2.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Waleed/AndroidStudioProjects/LearningApp_v2/app/src/main/res/layout/activity_lessons.xml" value="0.2" />
         <entry key="..\:/Users/Waleed/AndroidStudioProjects/LearningApp_v2/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Waleed/AndroidStudioProjects/LearningApp_v2/app/src/main/res/layout/quiz_item.xml" value="0.25416666666666665" />
       </map>
     </option>
   </component>

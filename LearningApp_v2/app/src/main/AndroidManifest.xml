@@ -10,13 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LearningApp_v2">
         <activity
+            android:name=".Exam2"
+            android:exported="true" />
+        <activity
+            android:name=".ExamSetting2"
+            android:exported="true" />
+        <activity
             android:name=".ExamResult"
             android:exported="true" />
         <activity
             android:name=".ExamSetting"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".Exam"
             android:exported="true" />
@@ -26,7 +30,6 @@
         <activity
             android:name=".Lessons"
             android:exported="true" />
-
         <activity
             android:name=".MainActivity"
             android:exported="true">
